@@ -11,7 +11,8 @@ const services = [
       </svg>
     ),
     title: "Web Development",
-    description: "We create responsive, user-friendly websites and web applications that provide exceptional user experiences."
+    description: "We create responsive, user-friendly websites and web applications that provide exceptional user experiences.",
+    colorClass: "text-purple-600 bg-purple-100"
   },
   {
     icon: (
@@ -22,7 +23,8 @@ const services = [
       </svg>
     ),
     title: "Mobile App Development",
-    description: "Our team builds native and cross-platform mobile applications that deliver seamless experiences across devices."
+    description: "Our team builds native and cross-platform mobile applications that deliver seamless experiences across devices.",
+    colorClass: "text-blue-600 bg-blue-100"
   },
   {
     icon: (
@@ -34,7 +36,8 @@ const services = [
       </svg>
     ),
     title: "UI/UX Design",
-    description: "We design intuitive, beautiful user interfaces that enhance user engagement and satisfaction."
+    description: "We design intuitive, beautiful user interfaces that enhance user engagement and satisfaction.",
+    colorClass: "text-pink-600 bg-pink-100"
   },
   {
     icon: (
@@ -45,7 +48,8 @@ const services = [
       </svg>
     ),
     title: "Custom Software Development",
-    description: "We develop tailored software solutions that address specific business challenges and optimize operations."
+    description: "We develop tailored software solutions that address specific business challenges and optimize operations.",
+    colorClass: "text-teal-600 bg-teal-100"
   },
   {
     icon: (
@@ -55,7 +59,8 @@ const services = [
       </svg>
     ),
     title: "DevOps & Cloud Services",
-    description: "We implement efficient CI/CD pipelines and cloud-based solutions to ensure scalability and reliability."
+    description: "We implement efficient CI/CD pipelines and cloud-based solutions to ensure scalability and reliability.",
+    colorClass: "text-amber-600 bg-amber-100"
   },
   {
     icon: (
@@ -65,7 +70,8 @@ const services = [
       </svg>
     ),
     title: "Quality Assurance & Testing",
-    description: "Our thorough testing processes ensure your software is reliable, secure, and performs as expected."
+    description: "Our thorough testing processes ensure your software is reliable, secure, and performs as expected.",
+    colorClass: "text-green-600 bg-green-100"
   }
 ];
 
@@ -104,14 +110,18 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden" ref={sectionRef}>
+    <section id="services" className="py-20 relative overflow-hidden gradient-bg-1" ref={sectionRef}>
+      {/* Colorful background elements */}
+      <div className="absolute top-40 right-10 w-64 h-64 color-dot color-dot-1"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 color-dot color-dot-2"></div>
+      
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 reveal-on-scroll">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-secondary rounded-full mb-5">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full mb-5">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Comprehensive Development Solutions
+            Comprehensive <span className="text-gradient">Development Solutions</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             We offer a wide range of services to help you build, optimize, and grow your digital products.
@@ -119,20 +129,34 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              ref={el => itemsRef.current[index] = el}
-              className="p-6 rounded-xl glass-card hover:border-primary/20 card-hover reveal-on-scroll"
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-12 h-12 mb-4 rounded-lg bg-secondary/50 flex items-center justify-center">
-                {service.icon}
+          {services.map((service, index) => {
+            // Assign different card style classes based on index
+            const cardClasses = [
+              "glass-card-purple",
+              "glass-card-blue",
+              "glass-card-teal",
+              "glass-card-orange",
+              "glass-card-pink",
+              "glass-card-blue"
+            ];
+            
+            return (
+              <div
+                key={index}
+                ref={el => itemsRef.current[index] = el}
+                className={`p-6 rounded-xl glass-card hover:border-primary/20 card-hover reveal-on-scroll ${cardClasses[index % cardClasses.length]}`}
+                style={{ transitionDelay: `${index * 0.1}s` }}
+              >
+                <div className={`w-12 h-12 mb-4 rounded-lg ${service.colorClass} flex items-center justify-center`}>
+                  <div className="text-current">
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

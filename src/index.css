@@ -16,35 +16,40 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 240 5.9% 10%;
+    /* Updated primary to a more vibrant purple */
+    --primary: 265 89% 66%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    /* Updated secondary to a soft blue */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    /* Updated muted to have more color */
+    --muted: 213 27% 95%;
+    --muted-foreground: 215 16% 46.1%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    /* Updated accent to soft teal */
+    --accent: 170 75% 41%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 66%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    /* Updated sidebar colors to be more vibrant */
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 47% 11.2%;
+    --sidebar-primary: 265 89% 66%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 170 75% 41%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 224 76% 48%;
   }
 
   .dark {
@@ -57,24 +62,24 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 265 89% 66%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 222 47% 11.2%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 217 33% 17.9%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 170 75% 41%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 217 33% 17.9%;
+    --input: 217 33% 17.9%;
+    --ring: 224 76% 48%;
   }
 }
 
@@ -129,8 +134,35 @@
     @apply custom-button border border-input bg-background hover:bg-accent hover:text-accent-foreground;
   }
 
+  /* Updated glass card styling for more vibrant colors */
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md shadow-sm border border-white/20 rounded-lg;
+    @apply bg-white/70 backdrop-blur-md shadow-sm border border-white/20 rounded-lg relative overflow-hidden;
+  }
+  
+  /* Add colorful gradients to glass-card elements */
+  .glass-card::before {
+    content: '';
+    @apply absolute -z-10 inset-0 opacity-20 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent;
+  }
+  
+  .glass-card-purple::before {
+    @apply bg-gradient-to-br from-purple-500/30 via-indigo-400/20 to-transparent;
+  }
+  
+  .glass-card-blue::before {
+    @apply bg-gradient-to-br from-blue-500/30 via-sky-400/20 to-transparent;
+  }
+  
+  .glass-card-teal::before {
+    @apply bg-gradient-to-br from-teal-500/30 via-emerald-400/20 to-transparent;
+  }
+  
+  .glass-card-orange::before {
+    @apply bg-gradient-to-br from-orange-500/30 via-amber-400/20 to-transparent;
+  }
+  
+  .glass-card-pink::before {
+    @apply bg-gradient-to-br from-pink-500/30 via-rose-400/20 to-transparent;
   }
   
   .blur-bg {
@@ -139,6 +171,45 @@
   
   .blur-bg::before {
     content: '';
-    @apply absolute -inset-0.5 blur-xl bg-gradient-to-r from-muted/50 to-muted/50 opacity-30 -z-10;
+    @apply absolute -inset-0.5 blur-xl bg-gradient-to-r from-primary/10 via-accent/10 to-muted/10 opacity-50 -z-10;
+  }
+
+  /* Colorful gradients for section backgrounds */
+  .gradient-bg-1 {
+    @apply bg-gradient-to-br from-primary/5 to-accent/5;
+  }
+  
+  .gradient-bg-2 {
+    @apply bg-gradient-to-br from-blue-500/5 to-purple-500/5;
+  }
+  
+  .gradient-bg-3 {
+    @apply bg-gradient-to-br from-teal-500/5 to-emerald-500/5;
+  }
+  
+  /* Colorful decoration elements */
+  .color-dot {
+    @apply absolute rounded-full opacity-70 blur-lg;
+  }
+  
+  .color-dot-1 {
+    @apply bg-primary/30;
+  }
+  
+  .color-dot-2 {
+    @apply bg-accent/30;
+  }
+  
+  .color-dot-3 {
+    @apply bg-blue-500/30;
+  }
+  
+  .color-dot-4 {
+    @apply bg-pink-500/30;
+  }
+
+  /* Colorful gradients for text */
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
   }
 }

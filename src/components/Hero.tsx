@@ -20,11 +20,14 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
-      {/* Background elements */}
+      {/* Background colorful elements */}
       <div className="absolute inset-0 -z-10">
         <div ref={heroRef} className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary/30 blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-secondary/30 blur-3xl"></div>
+          {/* Colorful background blobs */}
+          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/30 blur-3xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-accent/20 blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-pink-500/15 blur-3xl"></div>
         </div>
       </div>
       
@@ -38,9 +41,8 @@ const Hero = () => {
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                 Crafting Digital <br />
-                <span className="relative inline-block">
+                <span className="text-gradient font-extrabold">
                   Experiences
-                  <span className="absolute -bottom-1 left-0 right-0 h-1 bg-primary/10"></span>
                 </span>
               </h1>
               
@@ -49,13 +51,13 @@ const Hero = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                   <a href="#contact">
                     Get started
                   </a>
                 </Button>
                 
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10 hover:text-primary">
                   <a href="#projects">
                     View our work
                   </a>
@@ -99,7 +101,9 @@ const Hero = () => {
           
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
-              <div className="aspect-square rounded-2xl overflow-hidden glass-card shadow-xl animate-float">
+              <div className="aspect-square rounded-2xl overflow-hidden glass-card shadow-xl animate-float relative">
+                {/* Add colorful gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-blue-500/10 to-accent/10 z-10"></div>
                 <img
                   src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"
                   alt="Code on screen"
@@ -107,8 +111,8 @@ const Hero = () => {
                 />
               </div>
               
-              <div className="absolute -bottom-8 -left-8 bg-white rounded-lg p-4 shadow-lg glass-card flex items-center space-x-3 animate-fade-in">
-                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+              <div className="absolute -bottom-8 -left-8 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-purple flex items-center space-x-3 animate-fade-in">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 18L22 12L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M8 6L2 12L8 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -121,8 +125,8 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg glass-card flex items-center space-x-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-blue flex items-center space-x-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

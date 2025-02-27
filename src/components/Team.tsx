@@ -24,7 +24,8 @@ const team = [
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
         </svg>
       ), url: "#" }
-    ]
+    ],
+    bgColor: "from-purple-500/20 to-blue-500/20"
   },
   {
     name: "Sarah Williams",
@@ -45,7 +46,8 @@ const team = [
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
         </svg>
       ), url: "#" }
-    ]
+    ],
+    bgColor: "from-pink-500/20 to-purple-500/20"
   },
   {
     name: "Michael Chen",
@@ -64,7 +66,8 @@ const team = [
           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
         </svg>
       ), url: "#" }
-    ]
+    ],
+    bgColor: "from-blue-500/20 to-cyan-500/20"
   },
   {
     name: "Emma Rodriguez",
@@ -83,7 +86,8 @@ const team = [
           <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
         </svg>
       ), url: "#" }
-    ]
+    ],
+    bgColor: "from-teal-500/20 to-green-500/20"
   }
 ];
 
@@ -122,14 +126,18 @@ const Team = () => {
   }, []);
 
   return (
-    <section id="team" className="py-20" ref={sectionRef}>
+    <section id="team" className="py-20 gradient-bg-3" ref={sectionRef}>
+      {/* Colorful background elements */}
+      <div className="absolute top-20 right-40 w-72 h-72 color-dot color-dot-2"></div>
+      <div className="absolute bottom-40 left-20 w-80 h-80 color-dot color-dot-3"></div>
+
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 reveal-on-scroll">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-secondary rounded-full mb-5">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full mb-5">
             Our Team
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet Our Experts
+            Meet Our <span className="text-gradient">Experts</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Our talented team combines technical expertise with creative problem-solving to deliver exceptional results.
@@ -141,17 +149,20 @@ const Team = () => {
             <div
               key={index}
               ref={el => itemsRef.current[index] = el}
-              className="glass-card rounded-xl overflow-hidden reveal-on-scroll"
+              className="glass-card rounded-xl overflow-hidden reveal-on-scroll relative"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
+              {/* Colorful gradient overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} opacity-70 z-0 pointer-events-none`}></div>
+              
               <div className="aspect-square overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 relative z-10"
                 />
               </div>
-              <div className="p-4 text-center">
+              <div className="p-4 text-center relative z-10">
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{member.role}</p>
                 <div className="flex justify-center space-x-3">
@@ -159,7 +170,7 @@ const Team = () => {
                     <a
                       key={idx}
                       href={social.url}
-                      className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                      className="w-8 h-8 rounded-full bg-white/60 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                     >
                       {social.icon}
                     </a>
