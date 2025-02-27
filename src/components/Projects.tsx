@@ -1,30 +1,34 @@
 
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: "ecommerce-platform",
     title: "E-commerce Platform",
     category: "Web Development",
     description: "A fully responsive e-commerce solution with integrated payment processing and inventory management.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
-    link: "#",
+    link: "/projects/ecommerce-platform",
     color: "from-purple-500/80 to-indigo-500/80"
   },
   {
+    id: "healthcare-app",
     title: "Healthcare Mobile App",
     category: "Mobile Development",
     description: "A patient-focused mobile application for booking appointments and tracking health metrics.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    link: "#",
+    link: "/projects/healthcare-app",
     color: "from-blue-500/80 to-cyan-500/80"
   },
   {
+    id: "financial-dashboard",
     title: "Financial Dashboard",
     category: "UI/UX Design",
     description: "An intuitive dashboard for financial analytics with real-time data visualization.",
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    link: "#",
+    link: "/projects/financial-dashboard",
     color: "from-teal-500/80 to-emerald-500/80"
   }
 ];
@@ -110,7 +114,7 @@ const Projects = () => {
                   style={{ opacity: activeIndex === index ? 0.7 : 0 }}
                 >
                   <Button asChild variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    <a href={project.link}>View Project</a>
+                    <Link to={project.link}>View Project</Link>
                   </Button>
                 </div>
               </div>
@@ -130,9 +134,9 @@ const Projects = () => {
         
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="border-blue-500/20 text-blue-600 hover:bg-blue-500/10">
-            <a href="#" className="px-6">
+            <Link to="/projects" className="px-6">
               View All Projects
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
