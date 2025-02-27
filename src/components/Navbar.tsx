@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,11 +23,11 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="font-display font-bold text-lg">
-            DevStudio
+            NN Solutions
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -36,6 +37,9 @@ export const Navbar = () => {
           <a href="#projects" className="text-sm font-medium hover:text-primary/80 transition-colors story-link">
             Work
           </a>
+          <Link to="/projects" className="text-sm font-medium hover:text-primary/80 transition-colors story-link">
+            Projects
+          </Link>
           <a href="#team" className="text-sm font-medium hover:text-primary/80 transition-colors story-link">
             Team
           </a>
@@ -107,6 +111,13 @@ export const Navbar = () => {
           >
             Work
           </a>
+          <Link 
+            to="/projects" 
+            className="text-sm font-medium py-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Projects
+          </Link>
           <a 
             href="#team" 
             className="text-sm font-medium py-2"

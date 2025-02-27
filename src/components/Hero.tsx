@@ -26,8 +26,8 @@ const Hero = () => {
           {/* Colorful background blobs */}
           <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/30 blur-3xl"></div>
           <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-accent/20 blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-pink-500/15 blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-green-500/20 blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-teal-500/15 blur-3xl"></div>
         </div>
       </div>
       
@@ -36,18 +36,18 @@ const Hero = () => {
           <div className="w-full md:w-1/2 mb-12 md:mb-0 md:pr-8">
             <div className="relative">
               <span className="inline-block px-3 py-1 text-xs font-medium bg-secondary rounded-full mb-5 animate-fade-in">
-                Expert Software Development
+                Project Management & Drupal Development
               </span>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                Crafting Digital <br />
+                Empowering <br />
                 <span className="text-gradient font-extrabold">
-                  Experiences
+                  Healthcare & Government
                 </span>
               </h1>
               
               <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                We build innovative software solutions that help businesses grow, scale, and succeed in the digital landscape.
+                NN Solutions delivers enterprise-grade Drupal development and expert project management services tailored for healthcare and government organizations.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -78,7 +78,7 @@ const Hero = () => {
                   ))}
                 </div>
                 <div className="text-sm">
-                  <span className="block font-medium">Trusted by teams worldwide</span>
+                  <span className="block font-medium">Trusted by organizations nationwide</span>
                   <div className="flex items-center mt-1">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <svg 
@@ -92,7 +92,7 @@ const Hero = () => {
                         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                       </svg>
                     ))}
-                    <span className="ml-1 text-muted-foreground">5.0 (28 reviews)</span>
+                    <span className="ml-1 text-muted-foreground">5.0 (24 reviews)</span>
                   </div>
                 </div>
               </div>
@@ -103,37 +103,42 @@ const Hero = () => {
             <div className="relative w-full max-w-md">
               <div className="aspect-square rounded-2xl overflow-hidden glass-card shadow-xl animate-float relative">
                 {/* Add colorful gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-blue-500/10 to-accent/10 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-green-500/10 to-accent/10 z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"
-                  alt="Code on screen"
+                  src="https://images.unsplash.com/photo-1603695682358-4c53987809f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  alt="Healthcare technology"
                   className="w-full h-full object-cover"
                 />
               </div>
               
-              <div className="absolute -bottom-8 -left-8 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-purple flex items-center space-x-3 animate-fade-in">
+              <div className="absolute -bottom-8 -left-8 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-green flex items-center space-x-3 animate-fade-in">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 18L22 12L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M8 6L2 12L8 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M14 4L10 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 11h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M8 11h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M8 16h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Clean Code</p>
-                  <p className="text-xs text-muted-foreground">Built with precision</p>
+                  <p className="text-sm font-medium">Project Management</p>
+                  <p className="text-xs text-muted-foreground">Delivered on time</p>
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-blue flex items-center space-x-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-lg glass-card glass-card-teal flex items-center space-x-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 17l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium">24/7 Support</p>
-                  <p className="text-xs text-muted-foreground">We're here to help</p>
+                  <p className="text-sm font-medium">Drupal Experts</p>
+                  <p className="text-xs text-muted-foreground">Enterprise solutions</p>
                 </div>
               </div>
             </div>

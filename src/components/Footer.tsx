@@ -30,10 +30,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-1">
             <div className="font-display font-bold text-lg mb-4">
-              DevStudio
+              NN Solutions
             </div>
             <p className="text-sm opacity-80 mb-6">
-              Creating exceptional digital experiences through innovative software development.
+              Empowering healthcare and government organizations with expert Drupal development and project management services.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -68,24 +68,24 @@ const Footer = () => {
               Services
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Web Development</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Mobile App Development</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">UI/UX Design</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Custom Software</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">DevOps Services</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Project Management</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Drupal Development</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Systems Integration</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Compliance & Security</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Technical Consulting</a></li>
             </ul>
           </div>
           
           <div className="col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
-              Company
+              Industries
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">About Us</a></li>
-              <li><a href="#team" className="opacity-80 hover:opacity-100 transition-opacity">Our Team</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Careers</a></li>
-              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Blog</a></li>
-              <li><a href="#contact" className="opacity-80 hover:opacity-100 transition-opacity">Contact Us</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Healthcare</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Federal Government</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">State & Local Government</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Educational Institutions</a></li>
+              <li><a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Non-Profit Organizations</a></li>
             </ul>
           </div>
           
@@ -94,7 +94,7 @@ const Footer = () => {
               Subscribe
             </h3>
             <p className="text-sm opacity-80 mb-4">
-              Join our newsletter to stay up to date on features and releases.
+              Join our newsletter to stay up to date on digital solutions for healthcare and government.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <div className="flex w-full max-w-xs">
@@ -128,7 +128,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm opacity-60 mb-4 md:mb-0">
-            © {new Date().getFullYear()} DevStudio. All rights reserved.
+            © {new Date().getFullYear()} NN Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm opacity-60">
             <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>

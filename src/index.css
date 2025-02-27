@@ -16,40 +16,40 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    /* Updated primary to a more vibrant purple */
-    --primary: 265 89% 66%;
+    /* Updated primary to a vibrant green */
+    --primary: 142 76% 36%;
     --primary-foreground: 0 0% 98%;
 
-    /* Updated secondary to a soft blue */
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47% 11.2%;
+    /* Updated secondary to a light green */
+    --secondary: 142 33% 96%;
+    --secondary-foreground: 142 50% 12%;
 
-    /* Updated muted to have more color */
-    --muted: 213 27% 95%;
-    --muted-foreground: 215 16% 46.1%;
+    /* Muted green */
+    --muted: 142 20% 96%;
+    --muted-foreground: 142 10% 40%;
 
-    /* Updated accent to soft teal */
-    --accent: 170 75% 41%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent with green tint */
+    --accent: 142 70% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 66%;
+    --border: 142 20% 90%;
+    --input: 142 20% 90%;
+    --ring: 142 76% 36%;
 
     --radius: 0.5rem;
 
-    /* Updated sidebar colors to be more vibrant */
-    --sidebar-background: 210 40% 98%;
-    --sidebar-foreground: 222 47% 11.2%;
-    --sidebar-primary: 265 89% 66%;
+    /* Sidebar colors */
+    --sidebar-background: 142 20% 98%;
+    --sidebar-foreground: 142 30% 20%;
+    --sidebar-primary: 142 76% 36%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 170 75% 41%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 224 76% 48%;
+    --sidebar-accent: 142 70% 50%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 142 20% 90%;
+    --sidebar-ring: 142 76% 36%;
   }
 
   .dark {
@@ -62,24 +62,24 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 265 89% 66%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 142 70% 50%;
+    --primary-foreground: 142 10% 5%;
 
-    --secondary: 222 47% 11.2%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 142 30% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 33% 17.9%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 142 30% 15%;
+    --muted-foreground: 142 10% 70%;
 
-    --accent: 170 75% 41%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 50% 25%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17.9%;
-    --input: 217 33% 17.9%;
-    --ring: 224 76% 48%;
+    --border: 142 30% 20%;
+    --input: 142 30% 20%;
+    --ring: 142 70% 50%;
   }
 }
 
@@ -145,8 +145,8 @@
     @apply absolute -z-10 inset-0 opacity-20 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent;
   }
   
-  .glass-card-purple::before {
-    @apply bg-gradient-to-br from-purple-500/30 via-indigo-400/20 to-transparent;
+  .glass-card-green::before {
+    @apply bg-gradient-to-br from-green-500/30 via-emerald-400/20 to-transparent;
   }
   
   .glass-card-blue::before {
@@ -180,7 +180,7 @@
   }
   
   .gradient-bg-2 {
-    @apply bg-gradient-to-br from-blue-500/5 to-purple-500/5;
+    @apply bg-gradient-to-br from-green-500/5 to-emerald-500/5;
   }
   
   .gradient-bg-3 {
@@ -201,11 +201,11 @@
   }
   
   .color-dot-3 {
-    @apply bg-blue-500/30;
+    @apply bg-green-500/30;
   }
   
   .color-dot-4 {
-    @apply bg-pink-500/30;
+    @apply bg-teal-500/30;
   }
 
   /* Colorful gradients for text */

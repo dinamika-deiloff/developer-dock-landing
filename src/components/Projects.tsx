@@ -5,30 +5,30 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    id: "ecommerce-platform",
-    title: "E-commerce Platform",
-    category: "Web Development",
-    description: "A fully responsive e-commerce solution with integrated payment processing and inventory management.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
-    link: "/projects/ecommerce-platform",
-    color: "from-purple-500/80 to-indigo-500/80"
+    id: "healthcare-portal",
+    title: "Healthcare Patient Portal",
+    category: "Healthcare",
+    description: "A HIPAA-compliant patient portal built on Drupal for a regional healthcare network, integrating with their EHR system.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    link: "/projects/healthcare-portal",
+    color: "from-green-500/80 to-teal-500/80"
   },
   {
-    id: "healthcare-app",
-    title: "Healthcare Mobile App",
-    category: "Mobile Development",
-    description: "A patient-focused mobile application for booking appointments and tracking health metrics.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    link: "/projects/healthcare-app",
+    id: "government-cms",
+    title: "Government Agency CMS",
+    category: "Government",
+    description: "A FedRAMP-compliant content management system for a federal agency, providing secure document management and public information sharing.",
+    image: "https://images.unsplash.com/photo-1569407228235-9a8e17e90b7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    link: "/projects/government-cms",
     color: "from-blue-500/80 to-cyan-500/80"
   },
   {
-    id: "financial-dashboard",
-    title: "Financial Dashboard",
-    category: "UI/UX Design",
-    description: "An intuitive dashboard for financial analytics with real-time data visualization.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    link: "/projects/financial-dashboard",
+    id: "medical-research",
+    title: "Medical Research Platform",
+    category: "Healthcare",
+    description: "A collaborative research platform for healthcare institutions to securely share and manage clinical trial data and research findings.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    link: "/projects/medical-research",
     color: "from-teal-500/80 to-emerald-500/80"
   }
 ];
@@ -76,14 +76,14 @@ const Projects = () => {
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 reveal-on-scroll">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-blue-500/10 text-blue-600 rounded-full mb-5">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-green-500/10 text-green-600 rounded-full mb-5">
             Our Work
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Recent <span className="text-gradient">Projects</span>
+            Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Explore our portfolio of successful projects that demonstrate our expertise and commitment to excellence.
+            Explore our portfolio of successful implementations for healthcare and government organizations.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ const Projects = () => {
               key={index}
               ref={el => itemsRef.current[index] = el}
               className={`rounded-xl glass-card card-hover reveal-on-scroll overflow-hidden relative ${
-                index === 0 ? 'glass-card-purple' : 
+                index === 0 ? 'glass-card-green' : 
                 index === 1 ? 'glass-card-blue' : 
                 'glass-card-teal'
               }`}
@@ -120,9 +120,8 @@ const Projects = () => {
               </div>
               <div className="p-6">
                 <span className={`text-xs font-medium px-2 py-1 rounded-full 
-                  ${index === 0 ? 'bg-purple-100 text-purple-600' : 
-                   index === 1 ? 'bg-blue-100 text-blue-600' : 
-                   'bg-teal-100 text-teal-600'}`}>
+                  ${project.category === 'Healthcare' ? 'bg-green-100 text-green-600' : 
+                   'bg-blue-100 text-blue-600'}`}>
                   {project.category}
                 </span>
                 <h3 className="text-xl font-semibold mt-2">{project.title}</h3>
@@ -133,7 +132,7 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button asChild variant="outline" className="border-blue-500/20 text-blue-600 hover:bg-blue-500/10">
+          <Button asChild variant="outline" className="border-green-500/20 text-green-600 hover:bg-green-500/10">
             <Link to="/projects" className="px-6">
               View All Projects
             </Link>
